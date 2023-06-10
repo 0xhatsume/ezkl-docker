@@ -1,0 +1,61 @@
+version: '3'
+services:
+  # ezkl:
+  #   build:
+  #     dockerfile: ./ezkl/Dockerfile
+
+  #   image: ezkl-cli:latest
+  #   container_name: ezkl
+  #   # build:
+  #   #   context: .
+  #   # env_file:
+  #   #   - .env
+  #   ports:
+  #     - 8888:8888
+  #     - 8545:8545
+  #   volumes:
+  #     - ./srv:/srv
+  #   command: ["sh"]
+  #   working_dir: /srv
+  #   stdin_open: true # docker run -i
+  #   tty: true        # docker run -t
+  
+  # maturin:
+  #   build:
+  #     dockerfile: ./maturin/Dockerfile
+
+  #   image: ezkl-maturin:latest
+  #   container_name: maturin
+  #   # build:
+  #   #   context: .
+  #   # env_file:
+  #   #   - .env
+  #   ports:
+  #     - 8888:8888
+  #     - 8545:8545
+  #   volumes:
+  #     - ./srv:/srv
+  #   command: ["bash"]
+  #   working_dir: /srv
+  #   stdin_open: true # docker run -i
+  #   tty: true        # docker run -t
+  
+  pyezkl:
+    build:
+      dockerfile: ./pyezkl/Dockerfile
+
+    image: pyezkl:latest
+    container_name: pyezkl
+    # build:
+    #   context: .
+    # env_file:
+    #   - .env
+    ports:
+      - 8888:8888
+      - 8545:8545
+    volumes:
+      - ./srv:/srv
+    command: ["bash"]
+    working_dir: /srv
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
