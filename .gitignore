@@ -18,6 +18,8 @@ package-lock.json
 .DS_Store
 
 # misc
-/srv/*
-!/srv/sample/1exportModel.py
-!/srv/sample/2setupCircuit.py
+srv/*
+!srv/sample
+srv/sample/*
+!srv/sample/1exportModel.py
+!srv/sample/2importModel.py
