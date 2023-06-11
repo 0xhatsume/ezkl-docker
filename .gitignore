@@ -25,3 +25,4 @@ srv/sample/*
 !srv/sample/2setupCircuit.py
 !srv/sample/3generateProof.py
 !srv/sample/4verifyProof.py
+!srv/sample/5createEvmVerifier.py
